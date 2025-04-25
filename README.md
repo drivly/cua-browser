@@ -1,8 +1,6 @@
 # CUA Browser
 
-This is a playground for you to test, explore, and get inspired by the power of Browserbase and Open AI's Computer Use Agent. This is free and always will be! It's not a product, just a demo playground
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fbrowserbase%2Fcua-browser&env=OPENAI_API_KEY,BROWSERBASE_API_KEY,BROWSERBASE_PROJECT_ID&envDescription=API%20keys%20needed%20to%20run%20CUA%20Browser&envLink=https%3A%2F%2Fgithub.com%2Fbrowserbase%2Fcua-browser%23environment-variables)
+This is a playground for you to test, explore, and get inspired by the power of Computer Use Agent. This is free and always will be! It's not a product, just a demo playground
 
 ## Getting Started
 
@@ -23,11 +21,10 @@ cp .env.example .env.local
 You'll need to set up your API keys:
 
 1. Get your OpenAI API key from [OpenAI's dashboard](https://platform.openai.com/api-keys)
-2. Get your Browserbase API key and project ID from [Browserbase](https://www.browserbase.com)
 
 1. Clone this repository:
    ```bash
-   git clone https://github.com/browserbase/cua-browser.git
+   git clone https://github.com/drivly/cua-browser.git
    cd cua-browser
    ```
 
@@ -36,7 +33,7 @@ You'll need to set up your API keys:
    npm install
    ```
 
-3. Create a `.env.local` file with your API keys. You can get your API keys from [OpenAI](https://platform.openai.com/api-keys) and [Browserbase](https://www.browserbase.com)
+3. Create a `.env.local` file with your API keys. You can get your OpenAI API key from [OpenAI](https://platform.openai.com/api-keys)
    ```
    OPENAI_API_KEY=your_openai_api_key
    OPENAI_ORG=your_openai_org_id (optional)
@@ -53,15 +50,15 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see CUA
 
 ## Usage
 
-Here's a basic example of how to implement the Browserbase Compute Use Agent:
+Here's a basic example of how to implement the Computer Use Agent:
 
 ```typescript
 import { Agent } from './app/api/agent/agent';
-import { BrowserbaseBrowser } from './app/api/agent/browserbase';
+import { Browser } from './app/api/agent/browserbase';
 
 async function main() {
   // Initialize the browser
-  const browser = new BrowserbaseBrowser(1024, 768);
+  const browser = new Browser(1024, 768);
   await browser.connect();
 
   // Initialize the agent
@@ -122,5 +119,5 @@ Note that this example uses the `getAction` and `takeAction` methods separately,
 
 - `agent.ts`: The main Agent class that handles interactions with the OpenAI API
 - `base_playwright.ts`: Base class for Playwright-based browser automation
-- `browserbase.ts`: Implementation of the Browserbase browser
+- `browserbase.ts`: Implementation of the browser
 - `utils.ts`: Utility functions for API calls and image handling

@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     images: ["/og.png"],
     title: "Computer Use Browser",
     description: "Watch AI browse the web, for free",
-    url: "https://cua.browserbase.com",
+    url: "https://cua.browser.ai",
   },
   icons: {
     icon: [

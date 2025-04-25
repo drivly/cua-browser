@@ -257,10 +257,9 @@ const BrowserSessionContainer: React.FC<BrowserSessionContainerProps> = ({
                       &quot;{initialMessage}&quot;
                     </motion.span>
 
-                    <motion.a
-                      href="https://www.browserbase.com/sign-up"
-                      target="_blank"
-                      rel="noopener noreferrer"
+                    <motion.button
+                      type="button"
+                      onClick={onRestart}
                       className="px-4 md:px-6 py-2 md:py-3 text-white text-base md:text-lg font-medium mt-4 md:mt-8 inline-block text-center"
                       style={{
                         background: "#F14A1C",
@@ -276,16 +275,9 @@ const BrowserSessionContainer: React.FC<BrowserSessionContainerProps> = ({
                       }}
                       whileTap={{ scale: 0.98 }}
                     >
-                      Want to try Browserbase?
-                    </motion.a>
-                    <motion.button
-                      type="button"
-                      onClick={onRestart}
-                      className="flex gap-x-2 text-white px-2 py-1 items-center"
-                    >
-                      <RotateCcwIcon className="size-4" />
                       Restart
                     </motion.button>
+
                   </motion.div>
                 </motion.div>
               )}
