@@ -4,6 +4,7 @@ import { useState, useEffect, useCallback, useRef } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import AnimatedButton from "./components/AnimatedButton";
 import Image from "next/image";
+import Link from "next/link";
 import posthog from "posthog-js";
 import ChatFeed from "./components/ChatFeed";
 import { Code, Gamepad2, Table, TrendingUp } from "lucide-react";
@@ -122,15 +123,8 @@ export default function Home() {
               <div
                 className="flex items-center gap-3 hover:opacity-90 transition-opacity duration-200"
               >
-                <Image
-                  src="/favicon.svg"
-                  alt="CUA Browser"
-                  className="w-8 h-8"
-                  width={32}
-                  height={32}
-                />
                 <span className="font-ppsupply text-gray-900 font-semibold">
-                  CUA Browser
+                  Browser.do
                 </span>
               </div>
             </div>
@@ -278,6 +272,8 @@ export default function Home() {
                 </motion.div>
               </div>
             </div>
+
+            <Link href="https://agents.do" target="_blank">
             <motion.div
               initial={{ opacity: 0, y: 20, scale: 0.95 }}
               animate={{ opacity: 1, y: 0, scale: 1 }}
@@ -306,9 +302,10 @@ export default function Home() {
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.5, delay: 0.5 }}
               >
-                Powered by OpenAI&apos;s computer-use model preview.
+                Powered by Agents.do
               </motion.p>
             </motion.div>
+            </Link>
           </main>
         </div>
       ) : (

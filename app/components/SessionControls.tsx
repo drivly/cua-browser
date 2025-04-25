@@ -45,7 +45,7 @@ export const SessionControls: React.FC<SessionControlsProps> = ({
         <div className="flex items-center px-1 py-1 text-sm text-[#2E191E]">
           <span className="font-medium">Session time:</span>{" "}
           <span className="ml-1 min-w-[80px] text-center">
-            {mounted ? formatTime(sessionTime, "5:00") : "0:00"}
+            {mounted ? formatTime(sessionTime, "10:00") : "0:00"}
           </span>
         </div>
       </div>

@@ -1310,20 +1310,13 @@ export default function LegacyChatFeed({
             rel="noopener noreferrer"
             className="flex items-center gap-3 hover:opacity-90 transition-opacity duration-200"
           >
-            <Image
-              src="/favicon.svg"
-              alt="CUA Browser"
-              className="w-8 h-8"
-              width={32}
-              height={32}
-            />
             <span className="font-ppsupply text-xl font-bold text-[#100D0D]">
-              CUA Browser
+              Browser.do
             </span>
           </a>
         </div>
         <div className="flex items-center gap-2">
-          <a
+          {/* <a
             href="https://browserbase.com/computer-use"
             target="_blank"
             rel="noopener noreferrer"
@@ -1340,7 +1333,7 @@ export default function LegacyChatFeed({
                 Deploy
               </span>
             </button>
-          </a>
+          </a> */}
           <motion.button
             onClick={onClose}
             className="flex items-center justify-center px-3 py-2 bg-[#F6F5F5] gap-1 text-sm font-medium border border-[#CAC8C7] transition-all duration-200 hover:bg-gray-100 h-full"
