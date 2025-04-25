@@ -6,7 +6,7 @@ import AnimatedButton from "./components/AnimatedButton";
 import Image from "next/image";
 import posthog from "posthog-js";
 import ChatFeed from "./components/ChatFeed";
-import { Code, Gamepad2, Layers, Table, TrendingUp } from "lucide-react";
+import { Code, Gamepad2, Table, TrendingUp } from "lucide-react";
 
 const Tooltip = ({
   children,
