@@ -6,7 +6,7 @@ import AnimatedButton from "./components/AnimatedButton";
 import Image from "next/image";
 import posthog from "posthog-js";
 import ChatFeed from "./components/ChatFeed";
-import { Code, Gamepad2, Layers, Table, TrendingUp } from "lucide-react";
+import { Code, Gamepad2, Table, TrendingUp } from "lucide-react";
 
 const Tooltip = ({
   children,
@@ -119,10 +119,7 @@ export default function Home() {
           {/* Top Navigation */}
           <nav className="flex justify-between items-center px-8 py-4 bg-white border-b border-[#CAC8C7] z-10">
             <div className="flex items-center gap-3">
-              <a
-                href="https://www.browserbase.com/computer-use"
-                target="_blank"
-                rel="noopener noreferrer"
+              <div
                 className="flex items-center gap-3 hover:opacity-90 transition-opacity duration-200"
               >
                 <Image
@@ -135,41 +132,10 @@ export default function Home() {
                 <span className="font-ppsupply text-gray-900 font-semibold">
                   CUA Browser
                 </span>
-              </a>
+              </div>
             </div>
             <div className="flex items-center gap-2">
-              <a
-                href="https://www.browserbase.com/computer-use"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <button className="h-fit flex items-center justify-center px-3 py-2 bg-white gap-1 text-sm font-medium border border-[#F14A1C] transition-all duration-200 hover:bg-[#F14A1C] group">
-                  <Layers
-                    size={20}
-                    className="sm:mr-2 text-[#F14A1C] group-hover:text-white transition-colors duration-200"
-                    strokeWidth={2}
-                    strokeLinecap="square"
-                    strokeLinejoin="miter"
-                  />
-                  <span className="hidden sm:inline text-[#F14A1C] group-hover:text-white transition-colors duration-200">Deploy</span>
-                </button>
-              </a>
-              <a
-                href="https://github.com/browserbase/cua-browser"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <button className="h-fit flex items-center justify-center px-3 py-2 bg-[#1b2128] hover:bg-[#1d232b] gap-1 text-sm font-medium text-white border border-[#CAC8C7]  transition-colors duration-200">
-                  <Image
-                    src="/github.svg"
-                    alt="GitHub"
-                    width={20}
-                    height={20}
-                    className="sm:mr-2"
-                  />
-                  <span className="hidden sm:inline">View GitHub</span>
-                </button>
-              </a>
+              {/* Deploy and GitHub buttons removed */}
             </div>
           </nav>
 
@@ -239,7 +205,7 @@ export default function Home() {
                     transition={{ duration: 0.3, delay: 0.1 }}
                     onClick={() =>
                       startChat(
-                        "Find the most recently opened non-draft PR on Github for Browserbase's Stagehand project and make sure the combination-evals in the PR validation passed."
+                        "Find the most recently opened non-draft PR on Github for the Stagehand project and make sure the combination-evals in the PR validation passed."
                       )
                     }
                     className="p-3 md:p-5 lg:p-6 text-sm md:text-base lg:text-xl text-[#2E191E] border border-[#CAC8C7] hover:border-[#FF3B00] hover:text-[#FF3B00] transition-colors font-ppsupply font-medium text-center overflow-hidden text-ellipsis break-words whitespace-normal md:min-h-[100px] lg:min-h-[120px] flex items-center justify-center backdrop-blur-sm bg-opacity-60 bg-[rgba(245,240,255,0.15)] hover:bg-[rgba(255,59,0,0.05)] rounded-none"
@@ -340,15 +306,7 @@ export default function Home() {
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.5, delay: 0.5 }}
               >
-                Powered by{" "}
-                <motion.a
-                  href="https://browserbase.com"
-                  className="text-[#FF3B00] hover:underline relative"
-                  whileHover={{ scale: 1.05 }}
-                >
-                  🅱️ Browserbase
-                </motion.a>{" "}
-                and OpenAI&apos;s computer-use model preview.
+                Powered by OpenAI&apos;s computer-use model preview.
               </motion.p>
             </motion.div>
           </main>

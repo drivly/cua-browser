@@ -111,8 +111,7 @@ const generateDetailedReasoning = (
           domain = new URL(action.url as string).hostname.replace("www.", "");
         }
       } catch (e) {
-        // eslint-disable-next-line @typescript-eslint/no-unused-vars
-        console.error("Error parsing URL:", e);
+       console.error("Error parsing URL:", e);
       }
 
       return `${basicDescription} to find information about ${
