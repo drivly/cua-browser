@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 import { useState, useEffect, useCallback, useRef } from "react";
 import React from "react";
 import { useWindowSize } from "usehooks-ts";
-import Image from "next/image";
 import posthog from "posthog-js";
 import {
   FunctionOutput,
@@ -13,7 +12,7 @@ import {
   OutputText,
 } from "../api/cua/agent/types";
 // import { SlidingNumber } from "../components/ui/sliding-number";
-import { Layers, Pin } from "lucide-react";
+import { Pin } from "lucide-react";
 import { SessionControls } from "./SessionControls";
 import BrowserSessionContainer from "./BrowserSessionContainer";
 import { SessionLiveURLs } from "@browserbasehq/sdk/resources/index.mjs";

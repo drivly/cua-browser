@@ -3,7 +3,6 @@
 import { useState, useEffect, useCallback, useRef } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import AnimatedButton from "./components/AnimatedButton";
-import Image from "next/image";
 import Link from "next/link";
 import posthog from "posthog-js";
 import ChatFeed from "./components/ChatFeed";
