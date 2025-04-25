@@ -94,10 +94,29 @@ async function createSession(timezone?: string) {
   };
   const session = await bb.sessions.create({
     projectId: process.env.BROWSERBASE_PROJECT_ID!,
-    browserSettings,
     keepAlive: true,
     region: getClosestRegion(timezone),
     timeout: 600,
+    browserSettings: {
+      fingerprint: {
+        browsers: ["chrome", "firefox", "edge", "safari"],
+        devices: ["desktop", "mobile"],
+        locales: ["en-US", "en-GB"],
+        operatingSystems: ["android", "ios", "linux", "macos", "windows"],
+        screen: {
+          maxWidth: 1920,
+          maxHeight: 1080,
+          minWidth: 1024,
+          minHeight: 768,
+        }
+      },
+      viewport: {
+        width: 1920,
+        height: 1080,
+      },
+      solveCaptchas: true,
+    },
+    proxies: true,
   });
   return {
     session
